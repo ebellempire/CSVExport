@@ -53,7 +53,7 @@ class CSVExportPlugin extends Omeka_Plugin_AbstractPlugin
 
 		return $contexts;
 	}
-	public function getElements($set){
+	public static function getElements($set){
 		$elementSet= get_record('ElementSet',array('name'=>"$set"));
 		$elements=array();
 		foreach ($elementSet->getElements() as $element){
@@ -62,7 +62,7 @@ class CSVExportPlugin extends Omeka_Plugin_AbstractPlugin
 		return $elements;	
 	}	
 	
-	function arrayToTable($data){
+	public static function arrayToTable($data){
 		$isheader=true;
 		echo '<table>';
 		foreach($data as $row){
