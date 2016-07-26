@@ -18,8 +18,9 @@
 	display: none;
 }
 </style>
-<p><strong>Instructions:</strong> Use the button below to open the table data in a new window. In the new window, use Control + A (PC) or &#8984; + A (Mac) to copy the data to your clipboard. Then paste the text into a spreadsheet program such as Excel. Save the file to the CSV format.</p>
-<a class="button" href="/items?output=export-csv" target="_blank">View Data in New Window</a>
+<h3>Usage Instructions</h3>
+<p>Use the button below to open the table data in a new window. In the new window, <strong>select all</strong> data (Control + A on PC or &#8984; + A on Mac) and <strong>copy</strong> it to your clipboard (Control + C on PC or &#8984; + C on Mac), then <strong>paste</strong> the text (Control + V on PC or &#8984; + V on Mac) into a spreadsheet program such as Excel. Save the file to the CSV format.</p>
+<a class="button" href="/items?output=export-csv" target="_blank">View Data in New Window</a><br><br>
 
 <div id="data-table"></div>
 <script>
