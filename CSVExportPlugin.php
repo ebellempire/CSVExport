@@ -3,7 +3,6 @@
 class CSVExportPlugin extends Omeka_Plugin_AbstractPlugin
 {
 	protected $_hooks = array(
-		'initialize',
 		'config_form', 
 		'config'
 		);
@@ -12,16 +11,12 @@ class CSVExportPlugin extends Omeka_Plugin_AbstractPlugin
 		'response_contexts',
 		'action_contexts',
 		'items_browse_per_page' );
-
-	public function hookInitialize()
-	{
-		get_view()->addHelperPath( dirname( __FILE__ ) . '/views/helpers', 'CSVExport_View_Helper_' );
-	}
 	
 	public function hookConfigForm()
 	{
 		require dirname(__FILE__) . '/views/admin/index.php';
 	}
+	
 	public function hookConfig(){
 		
 	}
