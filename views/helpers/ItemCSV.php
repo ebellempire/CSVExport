@@ -19,13 +19,13 @@ class CSVExport_View_Helper_ItemCSV extends Zend_View_Helper_Abstract
 		
 		/* Dublin Core metadata */
 		foreach(CSVExportPlugin::getElements('Dublin Core') as $element){
-			$itemMetadata[$i] = htmlentities( metadata( 'item', array( 'Dublin Core', "$element" ), array( 'all' => false ) ) );
+			$itemMetadata[$i] = htmlentities( implode('; ',metadata( 'item', array( 'Dublin Core', "$element" ), array( 'all' => true ) ) ));
 			$i++;
 		}
 		
 		/* Item Type metadata */
 		foreach(CSVExportPlugin::getElements('Item Type Metadata') as $element){
-			$itemMetadata[$i] = htmlentities( metadata( 'item', array( 'Item Type Metadata', "$element" ), array( 'all' => false ) ) );
+			$itemMetadata[$i] = htmlentities( implode('; ',metadata( 'item', array( 'Item Type Metadata', "$element" ), array( 'all' => true ) ) ));
 			$i++;
 		}		
 
