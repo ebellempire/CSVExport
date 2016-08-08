@@ -42,7 +42,10 @@ class CSVExport_View_Helper_ItemCSV extends Zend_View_Helper_Abstract
 			$files = null;
 		}
 		$itemMetadata[ $i ] = $files;
-
+		$i++;
+		
+		// Tags
+		$itemMetadata[ $i ] = tag_string($item,null,', ');
 
 		return $itemMetadata;
 	}

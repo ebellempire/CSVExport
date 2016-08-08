@@ -5,8 +5,9 @@ $omeka = ['Omeka ID','Omeka URL'];
 $dc = CSVExportPlugin::getElements('Dublin Core');
 $it = CSVExportPlugin::getElements('Item Type Metadata');	
 $files = ['Files'];
+$tags = ['Tags'];
 
-$headers = array(array_merge($omeka,$dc,$it,$files));
+$headers = array(array_merge($omeka,$dc,$it,$files,$tags));
 //print_r($headers);
 
 //Rows
