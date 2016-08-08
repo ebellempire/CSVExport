@@ -31,15 +31,17 @@ class CSVExport_View_Helper_ItemCSV extends Zend_View_Helper_Abstract
 
 		// Files
 		$files = array();
+		$fi=0;
 		foreach( $item->Files as $file )
-		{
-			$files[ $i ] = $file->getWebPath( 'original' );
-		}
-
-		if( count( $files ) > 0 ) {
-			$files = implode(',',$files);
-		}else{
-			$files = null;
+			{
+				$files[ $fi ] = $file->getWebPath( 'original' );
+				$fi++;
+			}
+	
+			if( count( $files ) > 0 ) {
+				$files = implode('; ',$files);
+			}else{
+				$files = null;
 		}
 		$itemMetadata[ $i ] = $files;
 		$i++;
